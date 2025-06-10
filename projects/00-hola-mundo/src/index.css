@@ -1,0 +1,31 @@
+/* Elimina el margen por defecto del body para que no haya espacio alrededor de la página */
+body {
+  margin: 0;
+
+  /* Establece un fondo oscuro para toda la app */
+  background: #222;
+
+  /* Usa la fuente predeterminada del sistema (mejor integración con el sistema operativo) */
+  font-family: system-ui;
+
+  /* Convierte el body en un grid, útil para centrar contenido */
+  display: grid;
+
+  /* Centra el contenido tanto horizontal como verticalmente */
+  place-content: center;
+
+  /* Hace que el body ocupe al menos toda la altura de la pantalla */
+  min-height: 100vh;
+}
+
+/* Clase que se usará probablemente en un contenedor principal de la app */
+.App {
+  /* Establece un layout en columna (de arriba a abajo) */
+  display: flex;
+
+  /* Alinea los elementos uno debajo del otro */
+  flex-direction: column;
+
+  /* Espacio vertical entre los elementos hijos */
+  gap: 8px;
+}

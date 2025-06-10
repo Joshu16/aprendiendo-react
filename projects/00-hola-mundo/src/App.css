@@ -1,0 +1,67 @@
+.tw-followCard {
+  display: flex;                   /* Alinea imagen + texto + botón en fila */
+  align-items: center;            /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Deja espacio entre texto y botón */
+  color: #fff;
+  font-size: .8rem;
+}
+
+.tw-followCard-header {
+  display: flex;         /* Alinea imagen + texto en fila */
+  align-items: center;
+  gap: 4px;              /* Espacio entre imagen y texto */
+}
+
+.tw-followCard-info {
+  display: flex;
+  flex-direction: column; /* Nombre y @usuario en columna */
+}
+
+.tw-followCard-infoUserName {
+  opacity: .6;           /* Hace el @usuario menos llamativo */
+}
+
+.tw-followCard-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px; /* Lo hace completamente circular */
+}
+
+.tw-followCard-button {
+  cursor: pointer;
+  padding: 6px 16px;
+  font-weight: bold;
+  border-radius: 999px;  /* Botón redondeado */
+  border: 1px solid #000;
+  transition: .3s ease background-color;
+  margin-left: 16px;
+}
+
+.tw-followCard-button:hover {
+  opacity: .8; /* Efecto visual al pasar el cursor */
+}
+
+.tw-followCard-button.is-following {
+  background: transparent;
+  border: 1px solid #bbb;
+  color: #fff;
+  width: 140px;
+}
+
+.tw-followCard-button.is-following:hover {
+  background-color: rgba(255, 0, 0, 0.178); /* Rojo claro al pasar el cursor */
+  color: red;
+  border: 1px solid red;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-text {
+  display: none;  /* Oculta texto "Siguiendo" */
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow {
+  display: block; /* Muestra "Dejar de seguir" */
+}
+
+.tw-followCard-stopFollow {
+  display: none;  /* Solo se muestra al hacer hover */
+}
