@@ -1,0 +1,87 @@
+header {
+  width: 100%;
+  /* Asegura que el header ocupe todo el ancho */
+  display: flex;
+  /* Flexbox para alinear contenido */
+  justify-content: space-between;
+  /* Espaciado entre el logo y el nav */
+  align-items: center;
+  /* Centra verticalmente */
+  padding: 0 20px;
+  /* Espaciado interno */
+  position: fixed;
+  /* Fijo en la parte superior */
+  top: 0;
+  height: 64px;
+  /* Altura consistente */
+  z-index: 1000;
+  /* Por encima del resto */
+}
+
+
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  padding-right: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+
+}
+
+header img {
+  width: 48px;
+  height: 48px;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: darken;
+  background: rgba(0, 0, 0, 0.425);
+  background-image: url(https://i.redd.it/6ib1hrf1bu6a1.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.landing h1 {
+  font-size: 6rem;
+  margin: 0;
+  line-height: 80px;
+}
+
+.landing h1:nth-child(2) {
+  font-style: italic;
+}
+
+.intro {
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4px;
+  row-gap: 4px;
+}
+
+.gallery img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+
+  transition: all 1s ease;
+}
+
+
+.gallery img:hover{
+  scale: 0.9;
+}

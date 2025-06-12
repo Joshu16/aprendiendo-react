@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  background: black;
+  font-family: system-ui;
+  min-height: 100vh;
+  color: white;
+  /* elimina el grid centrado */
+}
+
+
+
+/* Clase que se usará probablemente en un contenedor principal de la app */
+.App {
+  /* Establece un layout en columna (de arriba a abajo) */
+  display: flex;
+
+  /* Alinea los elementos uno debajo del otro */
+  flex-direction: column;
+
+  /* Espacio vertical entre los elementos hijos */
+  gap: 8px;
+}
