@@ -9,6 +9,7 @@
   background-blend-mode: darken;
   background: rgba(0, 0, 0, 0.438);
   background-image: url(https://www.gifcen.com/wp-content/uploads/2022/12/messi-gif-41.gif);
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,7 +22,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -34,19 +34,19 @@ body {
 
 .board {
   width: fit-content;
-  margin: 40px auto;
+  margin: 10px auto;
   text-align: center;
 }
 
 .board h1 {
   color: #eee;
-  margin-bottom: 16px;
   mix-blend-mode: exclusion;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .board button {
   padding: 8px 12px;
-  margin: 25px;
   background: transparent;
   border: 2px solid #eee;
   color: #eee;
@@ -65,13 +65,13 @@ body {
 .board .game {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 6px; /* antes 10px */
 }
 
 .turn {
   display: flex;
   justify-content: center;
-  margin: 15px auto;
+  margin: 10px auto;
   width: fit-content;
   position: relative;
   border-radius: 10px;
@@ -79,10 +79,11 @@ body {
 
 .turn .square,
 .winner .square {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   pointer-events: none;
   border-color: transparent;
+  font-size: 36px;
 }
 
 .square.is-selected {
@@ -112,7 +113,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  
 }
 
 .winner .win {
@@ -124,12 +124,13 @@ body {
 }
 
 .square {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border: 2px solid #eee;
   border-radius: 5px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  font-size: 48px;
+  font-size: 36px;
 }
